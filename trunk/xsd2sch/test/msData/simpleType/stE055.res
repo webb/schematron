@@ -1,1 +1,0 @@
-<c:result xmlns:c="http://www.w3.org/ns/xproc-step">invalid</c:result>
