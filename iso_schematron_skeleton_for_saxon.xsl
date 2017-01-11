@@ -735,9 +735,9 @@ which require a preprocess.
 			<axsl:choose>
       			<axsl:when test="namespace-uri()=''"><axsl:value-of select="name()"/></axsl:when>
       			<axsl:otherwise>
-      				<axsl:text>*:</axsl:text>
+      				<axsl:text>*[local-name()='</axsl:text>
       				<axsl:value-of select="local-name()"/>
-      				<axsl:text>[namespace-uri()='</axsl:text>
+      				<axsl:text>' and namespace-uri()='</axsl:text>
       				<axsl:value-of select="namespace-uri()"/>
       				<axsl:text>']</axsl:text>
       			</axsl:otherwise>
