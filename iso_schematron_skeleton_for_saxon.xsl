@@ -651,8 +651,9 @@ which require a preprocess.
 	<axsl:param name="fileNameParameter"  />
 	<axsl:param name="fileDirParameter" /> 
 	
-       
+    <!--   
     <axsl:variable name="document-uri"><axsl:value-of select="document-uri(/)" /></axsl:variable>
+    -->
     <xsl:text>&#10;&#10;</xsl:text><xsl:comment>PHASES</xsl:comment><xsl:text>&#10;</xsl:text>
 	<xsl:call-template name="handle-phase"/> 
     <xsl:text>&#10;&#10;</xsl:text><xsl:comment>PROLOG</xsl:comment><xsl:text>&#10;</xsl:text>
