@@ -651,8 +651,9 @@ which require a preprocess.
 	<axsl:param name="fileNameParameter"  />
 	<axsl:param name="fileDirParameter" /> 
 	
-       
+    <!--   
     <axsl:variable name="document-uri"><axsl:value-of select="document-uri(/)" /></axsl:variable>
+    -->
     <xsl:text>&#10;&#10;</xsl:text><xsl:comment>PHASES</xsl:comment><xsl:text>&#10;</xsl:text>
 	<xsl:call-template name="handle-phase"/> 
     <xsl:text>&#10;&#10;</xsl:text><xsl:comment>PROLOG</xsl:comment><xsl:text>&#10;</xsl:text>
@@ -735,9 +736,9 @@ which require a preprocess.
 			<axsl:choose>
       			<axsl:when test="namespace-uri()=''"><axsl:value-of select="name()"/></axsl:when>
       			<axsl:otherwise>
-      				<axsl:text>*:</axsl:text>
+      				<axsl:text>*[local-name()='</axsl:text>
       				<axsl:value-of select="local-name()"/>
-      				<axsl:text>[namespace-uri()='</axsl:text>
+      				<axsl:text>' and namespace-uri()='</axsl:text>
       				<axsl:value-of select="namespace-uri()"/>
       				<axsl:text>']</axsl:text>
       			</axsl:otherwise>
